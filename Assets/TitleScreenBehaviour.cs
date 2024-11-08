@@ -18,4 +18,12 @@ public class TiltleScreenBehaviour : MonoBehaviour
 
     [SerializeField]
     private List<Button> creditsButtons;
+
+    private void Start()
+    {
+        if (!PlayerPrefs.HasKey("GeneralVolume"))
+        {
+            
+        }
+    }
 }

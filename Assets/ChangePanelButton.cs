@@ -15,4 +15,14 @@ public class ChangePanelButton : MonoBehaviour
         toDesactivatePanel.SetActive(false);
         toActivatePanel.SetActive(true);
     }
+
+    public void Play()
+    {
+        
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

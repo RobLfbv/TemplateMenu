@@ -5,49 +5,14 @@ using UnityEngine.Audio;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
-public enum OpenPanel
+
+public class TiltleScreenBehaviour : UIMenuBehaviour
 {
-    MainMenu, Settings, Credits
-}
-
-public class TiltleScreenBehaviour : MonoBehaviour
-{
-    //*****
-    // Singleton pattern
-    //*****
-    private static TiltleScreenBehaviour _instance;
-    public static TiltleScreenBehaviour Instance { get { return _instance; } }
-
-
-    private void Awake()
-    {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
-    //*****
-    // Singleton pattern
-    //*****
-
-    [SerializeField]
-    private List<Button> mainMenuButtons;
-
-    [SerializeField]
-    private List<Button> settingsButtons;
-
-    [SerializeField]
-    private List<Button> creditsButtons;
-
-    [SerializeField]
-    public AudioMixer audioMixer;
 
     [SerializeField]
     private List<string> mixerItem;
+
+
 
     private IEnumerator Start()
     {

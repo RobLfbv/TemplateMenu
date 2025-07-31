@@ -10,7 +10,7 @@ public class SettingsSliderAudio : SettingsSlider
     public override void OnValueChanged()
     {
         PlayerPrefs.SetFloat(playerPrefsItem, UIItem.value);
-        TiltleScreenBehaviour.Instance.audioMixer.SetFloat(audioMixerItem, Mathf.Log10(PlayerPrefs.GetFloat(playerPrefsItem)) * 20);
+        UIMenuBehaviour.Instance.audioMixer.SetFloat(audioMixerItem, Mathf.Log10(PlayerPrefs.GetFloat(playerPrefsItem)) * 20);
         textValue.text = "" + Mathf.RoundToInt(PlayerPrefs.GetFloat(playerPrefsItem) * 100);
     }
 }
